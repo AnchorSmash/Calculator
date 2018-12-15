@@ -180,16 +180,16 @@ class Calculator {
         case .none:
             return firstNumber
         case .multiplication:
-            firstNumber = "\(firstNumDouble * secondNumDouble)"
+            firstNumber = "\(((firstNumDouble * secondNumDouble)/1000).rounded() * 1000)"
             condition = .equalResult
         case .addition:
-            firstNumber = "\(firstNumDouble + secondNumDouble)"
+            firstNumber = "\(((firstNumDouble + secondNumDouble)/1000).rounded() * 1000)"
             condition = .equalResult
         case .division:
-            firstNumber = "\(firstNumDouble / secondNumDouble)"
+            firstNumber = "\(((firstNumDouble / secondNumDouble)/1000).rounded() * 1000)"
             condition = .equalResult
         case .subtraction:
-            firstNumber = "\(firstNumDouble - secondNumDouble)"
+            firstNumber = "\(((firstNumDouble - secondNumDouble)/1000).rounded() * 1000)"
             condition = .equalResult
         }
         if(firstNumber == "0.0") {
